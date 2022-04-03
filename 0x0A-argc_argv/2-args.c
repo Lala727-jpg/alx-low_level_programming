@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
 	for (iterator = 0; iterator < argc; iterator++)
 	{
-		printf("a[%d]: %s\n", iterator, argv[iterator]);
+		printf("%s\n", argv[iterator]);
 	}
 	return (0);
 }
