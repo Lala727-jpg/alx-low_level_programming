@@ -4,37 +4,40 @@
 
 /**
  * main - program that adds positive numbers.
- * @argc: the number of argument.
- * @argv: the list of arguments
- * Return: 0, if no number is passed,
- * 1, if a symbol is passed.
+ * @argc: number of arguments.
+ * @argv: array of arguments.
+ * Return: result of the addition.
+ * or 1, if one of the numbers contain a symbol.
  */
 int main(int argc, char *argv[])
 {
-	int i, k, add, digits;
+	int a, b, c, digit, add;
 
+	digit = 0;
 	add = 0;
-	digits = 0;
 
 	if (argc == 0)
 	{
 		printf("0\n");
 	}
-	for (i = 1; i < argc; i++)
+	for (a = 1; a < argc; a++)
 	{
-		if (*argv[i] > '9' || *argv[i] < '0')
+		for (b = 0; argv[a][b] != '\0'; b++)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[a][b] > '9' || argv[a][b] < '0')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 	}
-	for (k = 1; k < argc; k++)
+	for (c = 1; c < argc; c++)
 	{
-		digits = atoi(argv[k]);
+		digit = atoi(argv[c]);
 
-		if (digits >= 0)
+		if (digit >= 0)
 		{
-			add = add + digits;
+			add = add + digit;
 		}
 	}
 	printf("%d\n", add);
