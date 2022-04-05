@@ -24,7 +24,7 @@ char *_strdup(char *str)
 		return ((char *)NULL);
 	cpy_set = cpy;
 
-	while (str)
+	while (*str)
 	{
 		*cpy_set = *str;
 		cpy_set++;
