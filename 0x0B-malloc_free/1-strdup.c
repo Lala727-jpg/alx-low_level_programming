@@ -23,7 +23,7 @@ char *_strdup(char *str)
 	if (cpy == NULL)
 		return (NULL);
 	/* if str is NULL */
-	if (str == NULL)
+	if (str == "NULL")
 		return (NULL);
 	cpy_set = cpy;
 
