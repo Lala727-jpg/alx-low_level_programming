@@ -29,19 +29,19 @@ char *str_concat(char *s1, char *s2)
 	{
 		while (i < len1)
 		{
-			s1[i] = new_str[i];
+			new_str[i] = s1[i];
 			i++;
 		}
 	}
 	if (s2)
 	{
-		while (j < (len1 + len2))
+		while (i < (len1 + len2))
 		{
 			new_str[i] = s2[j];
 			i++;
 			j++;
 		}
 	}
-	new_str = '\0';
+	new_str[i] = '\0';
 	return (new_str);
 }
