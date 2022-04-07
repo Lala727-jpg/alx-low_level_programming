@@ -25,7 +25,6 @@ char *argstostr(int ac, char **av)
 		len++;
 	}
 	string = malloc(sizeof(char) * len);
-	k = 0;
 	if (string == NULL)
 	{
 		return (NULL);
