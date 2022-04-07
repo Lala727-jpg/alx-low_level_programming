@@ -46,7 +46,7 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < len; i++)
+	for (i = 0; i <= len; i++)
 	{
 		if (str[i] == ' ' || str[i] == '\0')
 		{
@@ -57,7 +57,7 @@ char **strtow(char *str)
 				if (tmp == NULL)
 					return (NULL);
 				while (start < end)
-					*tmp = str[start++];
+					*tmp++ = str[start++];
 				*tmp = '\0';
 				tree[k] = tmp - c;
 				k++;
